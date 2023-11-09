@@ -17,7 +17,7 @@ header {
     align-items: center;
     margin-left: 10px;
     margin-right: 150px;
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 .logo {
@@ -43,19 +43,23 @@ header {
     width: 90%;
     height: 300px;
     font-size: 20px;
-    color: #ffffff;
+    color: #cac1ff;
     padding: 20px 30px 20px 30px;
     border-radius: 10px;
-    border: 5px solid #565961;
-    background-color: #565961;
+    border: 5px solid #454061;
+    background-color: #22222273;
+    backdrop-filter: blur(3px);;
     box-shadow:
     rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, 
     rgba(0, 0, 0, 0.12) 0px 4px 6px, 
     rgba(0, 0, 0, 0.17) 0px 12px 13px, 
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
     transition: 1s ease-out;
+}
+
+.input-textarea::placeholder {
+    color: #cac1ff82;
 }
 
 .input-textarea:focus {
@@ -106,3 +110,44 @@ textarea::-webkit-scrollbar-thumb {
     margin-left: 20px;
 }
 
+.background-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+section {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+section i {
+    position: absolute;
+    background-color: #ffffff9a;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow:
+    0 0 10px #ffffff,
+    0 0 20px #ffffff,
+    0 0 40px #ffffff,
+    0 0 80px #ffffff;
+    animation: animate linear infinite;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+    } 
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
